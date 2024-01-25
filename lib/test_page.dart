@@ -18,9 +18,10 @@ class _TestPageState extends State<TestPage> {
       {required IconData icon,
       required String label,
       Color color = Colors.black}) {
-    return InkWell(
+    return InkWell( // button click 
       onTap: () {
         print(label);
+        // ***for change value 
         setState(() {
           //_text = Random().nextInt(100).toString();
           _text = label;
@@ -81,15 +82,18 @@ class _TestPageState extends State<TestPage> {
             Expanded(
                 child: Center(
                     child: Text(
-              _text,
-              style: GoogleFonts.kanit(
-                fontSize: 80.0,
-              ),
-            ))),
+                      _text,
+                      style: GoogleFonts.kanit(
+                        fontSize: 80.0,
+                      ),
+                    )
+                )
+            ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                //crossAxisAlignment: CrossAxisAlignment.start,
-                children: itemList
+                    //crossAxisAlignment: CrossAxisAlignment.start,
+                children: itemList 
+                
 
                 //[
                 // for (var item in itemList) item,
